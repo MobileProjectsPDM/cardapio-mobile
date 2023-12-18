@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: {
+  homeContainer: {
     flex: 1,
     backgroundColor: "#fff",
   },
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
   mainTitle: {
     fontWeight: "bold",
     fontSize: 30,
-    marginVertical: 35,
+    marginVertical: 40,
     textAlign: "center",
   },
 });

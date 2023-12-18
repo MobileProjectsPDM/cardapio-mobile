@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  loginContainer: {
+  signContainer: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
