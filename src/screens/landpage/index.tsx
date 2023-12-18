@@ -5,13 +5,9 @@ import LoginButton from "../../components/buttons/loginButton";
 import MenuButton from "../../components/buttons/followButton";
 import { useNavigation } from "@react-navigation/native";
 
-
 export function LandPage() {
   const navigation = useNavigation();
 
-  function handleClick() {
-    navigation.navigate("Home" as never);
-  }
   return (
     <View style={styles.container}>
       <Header />
@@ -19,8 +15,14 @@ export function LandPage() {
         <Text style={styles.mainTitle}>
           O cardápio mais completo para o seu dia!
         </Text>
-        <LoginButton title="Fazer Login" onPress={handleClick} />
-        <MenuButton title="Confira o Cardápio" />
+        <LoginButton
+          title="Fazer Login"
+          onPress={() => navigation.navigate("Home" as never)}
+        />
+        <MenuButton
+          title="Confira o Cardápio"
+          onPress={() => navigation.navigate("Cardapio" as never)}
+        />
       </View>
     </View>
   );
