@@ -1,4 +1,4 @@
-import { SafeAreaView, View, TextInput, Text } from "react-native";
+import { SafeAreaView, View, TextInput, Text, Alert } from "react-native";
 import { styles } from "./styles";
 import LoginButton from "../../components/buttons/loginButton";
 import { useNavigation } from "@react-navigation/native";
@@ -14,13 +14,15 @@ export function LoginPage() {
   const navigation = useNavigation();
 
   function handleLogin() {
-    console.log("here");
+    if (form.email === "" || form.password.length < 6) {
+      return Alert.alert("Digite todas as informações!");
+    }
   }
   function doSignup() {
     navigation.navigate("Cadastro" as never);
   }
 
-  console.log(form)
+  console.log(form);
 
   return (
     <View style={styles.loginContainer}>

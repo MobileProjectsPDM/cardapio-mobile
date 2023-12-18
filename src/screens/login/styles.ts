@@ -8,6 +8,9 @@ export const styles = StyleSheet.create({
   },
   mainTitle: {
     color: "#E88C38",
+    textShadowColor: "rgba(0, 0, 0, 0.5)", // Cor do sombreamento (preto semi-transparente)
+    textShadowOffset: { width: 2, height: 2 }, // Deslocamento do sombreamento (horizontal, vertical)
+    textShadowRadius: 5, // Raio do sombreamento
     fontSize: 45,
     fontWeight: "700",
     marginTop: 50,
